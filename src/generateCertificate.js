@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.css'
 const CertificateForm = () => {
 const [message,setMessage]=useState('')
-  const handleFormSubmit = ({name,course,date,sign}) => {
+  const handleFormSubmit = ({name,course,date,sign,_id}) => {
     // e.preventDefault();
     // Create a new PDF document
     console.log(name,course,date,sign)
@@ -27,6 +27,9 @@ const [message,setMessage]=useState('')
     doc.setFont('Helvertica','Bold')
     doc.setFontSize(20);
     doc.text(`SIGNATURE: ${sign}`,370,400)
+    doc.setFont('Helvertica','Normal')
+    doc.setFontSize(20);
+    doc.text(`Certificate Id: ${_id}`,80,420 )
     // Save the PDF as a Blob
     const pdfBlob = doc.output('blob');
 
@@ -54,6 +57,7 @@ const [message,setMessage]=useState('')
     }
     axios.post("http://localhost:3000/api/certificate",data)
     .then(response=>{
+         console.log(response)
         handleFormSubmit(response.data);
         alert("Certificate Created Succussfully!");
         if(response.status==201){

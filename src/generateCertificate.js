@@ -89,7 +89,7 @@ const [message,setMessage]=useState('')
             <input type="date" className="form-control" placeholder="Date"  id="date" required />
             </div><br/>
             <div className="input-group">
-                <input type="text" className="form-control" placeholder="singer" id="sign" required />
+                <input type="text" className="form-control" placeholder="sign" id="sign" required />
             </div><br/>
 
             <div className="input-group m-1">

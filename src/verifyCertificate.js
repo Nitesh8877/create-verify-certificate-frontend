@@ -7,7 +7,7 @@ export default function VerifyCertificate() {
   function validate(e){
     const Id=document.getElementById('id').value;
     e.preventDefault();
-    axios.get('http://localhost:3000/api/certificate/'+Id)
+    axios.get('https://create-verify-certificate.onrender.com/api/certificate/'+Id)
     .then(res=>{
       setMessage(res.data.message);
     })

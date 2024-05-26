@@ -55,7 +55,7 @@ const [message,setMessage]=useState('')
         date:date,
         sign:sign
     }
-    axios.post("http://localhost:3000/api/certificate",data)
+    axios.post("https://create-verify-certificate.onrender.com/api/certificate",data)
     .then(response=>{
          console.log(response)
         handleFormSubmit(response.data);

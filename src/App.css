@@ -1,81 +1,308 @@
-.app{
-  text-align: center;
-  background-color: rgb(95, 231, 113);
+/* Global Styles */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.home button{
-  /* margin:'40px',textAlign:'center',fontSize:'40px',color:'red'}} */
-  margin: 120px;
-  padding: 30px;
+/* Home Page Styles */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.home-header {
   text-align: center;
-  font-size: '40px';
-  color:rgb(92, 34, 218);
-  font-family: cursive;
+  margin-bottom: 60px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.home-header h1 {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.button-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.home button {
+  padding: 25px 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid white;
+  border-radius: 50px;
   cursor: pointer;
-  border-radius: 40px;
-  border-color: rgb(58, 228, 20);
-  background-color: rgb(58, 228, 20);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
+.home button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: white;
+  color: #667eea;
 }
- .home button:hover{
-  background-color: white;;
-  color:rgb(92, 34, 218);
-  border-color: white;;
-}
-.home button a{
+
+.home button a {
   text-decoration: none;
+  color: inherit;
 }
 
-.form{
-  margin: 40px;
+.home-image {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Form Styles */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.form {
+  background: white;
   padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form h4 {
+  color: #667eea;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
   text-align: center;
-  /* width: 500px; */
-  /* height: 500px; */
-  /* align-items: center; */
-}
-.form label{
-  font-size: 30px;
-  font-family: cursive;
-  letter-spacing: 3px;
-  
-}
-.form label input{
-  font-size: 30px;
-  border: 5px solid white;
-  border-radius: 15px;
-
-}
-.generate{
-  padding: 100px;
-  margin: 50px;
-  font-family: cursive;
 }
 
-
-.card{
-  margin-top: 200px;
-  font-family: cursive;
+.form-group {
+  margin-bottom: 25px;
 }
 
-.card-body .card-title{
-  font-family: cursive;
-  color: skyblue;
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
 }
 
-.card-body input{
-  font-size: 25px;
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
-  border-color: white;
-  width: 500px;
-}
-.danger{
- color: rgb(254, 22, 22);
-}
-.success{
- color: rgb(10, 247, 101);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
 
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
 
+/* Verify Certificate Styles */
+.verify-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card-body {
+  padding: 50px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-body input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.card-body input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-validate {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-validate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.message-box {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.danger {
+  background: #fee;
+  color: #c33;
+  border: 2px solid #c33;
+}
+
+.success {
+  background: #efe;
+  color: #2a7;
+  border: 2px solid #2a7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-header p {
+    font-size: 1.1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home button {
+    padding: 20px 40px;
+    font-size: 1rem;
+  }
+
+  .form, .card-body {
+    padding: 30px;
+  }
+}
